@@ -6,7 +6,7 @@ const Todo = () => {
     const [todo, setTodo] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/allTodo")
+        fetch("https://floating-coast-42596.herokuapp.com/allTodo")
             .then(res => res.json())
             .then(data => setTodo(data))
     }, [todo])
@@ -20,7 +20,7 @@ const Todo = () => {
                 date: new Date(),
                 name: inputData
             }
-            const url = `http://localhost:5000/addTodo`;
+            const url = `https://floating-coast-42596.herokuapp.com/addTodo`;
             fetch(url, {
                 method: "POST",
                 headers: {
@@ -33,7 +33,7 @@ const Todo = () => {
     }
 
     const deleteItem = (id) => {
-        fetch(`http://localhost:5000/deleteTodo/${id}`, {
+        fetch(`https://floating-coast-42596.herokuapp.com/deleteTodo/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())
@@ -51,7 +51,7 @@ const Todo = () => {
                     </figure>
 
                     <div className="addItems ">
-                        <input style={{ width: "40%", fontSize: "25px" }} className="shadow pt-2 pb-2" type="text" placeholder="✍ Add Items..."
+                        <input style={{ width: "98%", fontSize: "30px",borderRadius:"10px" }} className="shadow pt-3 pb-3" type="text" placeholder="✍ Add Todo..."
                             value={inputData}
                             onChange={(e) => setInputData(e.target.value)}
                         />
