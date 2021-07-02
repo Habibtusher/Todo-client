@@ -51,7 +51,7 @@ const Todo = () => {
                     </figure>
 
                     <div className="addItems ">
-                        <input style={{ width: "98%", fontSize: "30px",borderRadius:"10px" }} className="shadow pt-3 pb-3" type="text" placeholder="✍ Add Todo..."
+                        <input style={{ width: "98%", fontSize: "30px",borderRadius:"15px" }} className="shadow pt-2 pb-2" type="text" placeholder="✍ Add Todo..."
                             value={inputData}
                             onChange={(e) => setInputData(e.target.value)}
                         />
